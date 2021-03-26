@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Loja.AppService\Churrascaria.AppService.csproj" />
+    <ProjectReference Include="..\Loja.Data\Churrascaria.Data.csproj" />
+    <ProjectReference Include="..\Loja.Domain\Churrascaria.Domain.csproj" />
+    <ProjectReference Include="..\Loja.Repository\Churrascaria.Repository.csproj" />
+    <ProjectReference Include="..\Loja.UoW\Churrascaria.UoW.csproj" />
+  </ItemGroup>
+
+</Project>
