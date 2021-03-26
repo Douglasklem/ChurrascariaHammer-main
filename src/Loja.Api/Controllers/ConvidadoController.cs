@@ -38,11 +38,20 @@ namespace Churrascaria.Api.Controllers
             return Ok(mapper.Map<ICollection<ConvidadoDto>>(await convidadoAppService.Listar()));
         }
 
+        [HttpPut]
+
+        public async Task<IActionResult> Put(ConvidadoViewModel convidadoViewModel)
+        {
+            await convidadoAppService.Alterar(mapper.Map<Convidado>(convidadoViewModel));
+
+            return Ok("Convidado alterado com sucesso");
+        }
+
         [HttpDelete]
 
-        public async Task<IActionResult> Delete(ConvidadoViewModel convidadoView)
+        public async Task<IActionResult> Delete(ConvidadoViewModel convidadoViewModel)
         {
-            await convidadoAppService.Deletar(convidadoView.Id);
+            await convidadoAppService.Deletar(convidadoViewModel.Id);
 
             return Ok("Convidado excluido");
         }
