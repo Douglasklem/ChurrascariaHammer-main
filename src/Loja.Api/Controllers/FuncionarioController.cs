@@ -44,7 +44,7 @@ namespace Churrascaria.Api.Controllers
         public async Task<IActionResult> Delete(FuncionarioViewModel funcionarioViewModel)
         {
             await FuncionarioAppService.Deletar(funcionarioViewModel.Id);
-            return Ok("Produto excluído com sucesso");
+            return Ok("Funcionario excluído com sucesso");
         }
     }
 }
