@@ -44,7 +44,7 @@ namespace Churrascaria.Api.Controllers
         {
             await convidadoAppService.Alterar(mapper.Map<Convidado>(convidadoViewModel));
 
-            return Ok("Convidado alterado com sucesso");
+            return Ok("Convida alterado com sucesso");
         }
 
         [HttpDelete]
