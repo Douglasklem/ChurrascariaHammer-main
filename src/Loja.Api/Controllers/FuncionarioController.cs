@@ -30,7 +30,7 @@ namespace Churrascaria.Api.Controllers
         public async Task<IActionResult> Post(FuncionarioViewModel funcionarioViewModel)
         {
             await FuncionarioAppService.Gravar(mapper.Map<Funcionario>(funcionarioViewModel));
-            return Ok("Produut cadastrada com sucesso");
+            return Ok("Funcionario cadastrada com sucesso");
         }
 
         [HttpGet]
